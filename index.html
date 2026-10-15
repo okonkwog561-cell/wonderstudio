@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101426">
+<title>WonderStudio — Personal AI Cartoon Planner</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">✦</div><div><strong>WonderStudio</strong><small>Personal cartoon creator</small></div></div>
+  <span class="pill">FREE STARTER</span>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">YOUR IDEAS → YOUR ORIGINAL VIDEOS</div>
+    <h1>Turn inspiration into<br><span>your own cartoon story.</span></h1>
+    <p>Plan original videos with your own characters, then take the script and scene plan into free editing and animation tools.</p>
+  </section>
+  <section class="panel">
+    <div class="step-title"><span>01</span><div><h2>Start with a reference</h2><p>Paste a public YouTube link to record what inspired you.</p></div></div>
+    <label for="url">YouTube video URL (optional)</label>
+    <input id="url" type="url" placeholder="https://www.youtube.com/watch?v=…" autocomplete="url">
+    <p class="hint">This starter does not download or automatically watch the video. Use it as inspiration; make a fresh script and avoid copying protected scenes, dialogue, music, or characters.</p>
+    <div class="grid two">
+      <div><label for="topic">What is the new story about?</label><textarea id="topic" rows="3" placeholder="Example: three friends find a mysterious glowing box in a garden."></textarea></div>
+      <div><label for="lesson">Lesson or feeling</label><select id="lesson"><option>Teamwork</option><option>Kindness</option><option>Honesty</option><option>Curiosity</option><option>Courage</option><option>Sharing</option><option>Funny adventure</option></select></div>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="step-title"><span>02</span><div><h2>Choose your cartoon</h2><p>Keep characters consistent across episodes.</p></div></div>
+    <div class="grid two">
+      <div><label for="characters">Your characters</label><select id="characters"><option value="Bobo, Kiko, and Lily">Bobo, Kiko, and Lily</option><option value="My original characters">My original characters (describe below)</option><option value="New original characters">Create new original characters</option></select></div>
+      <div><label for="style">Visual style</label><select id="style"><option>Bright 3D cartoon</option><option>2D storybook cartoon</option><option>Paper-cut animation</option><option>Anime-inspired original design</option></select></div>
+      <div><label for="length">Video length</label><select id="length"><option value="60–90 seconds">Short (60–90 seconds)</option><option value="3–5 minutes">3–5 minutes</option><option value="5–8 minutes">5–8 minutes</option></select></div>
+      <div><label for="format">Publishing format</label><select id="format"><option>YouTube + vertical Shorts/Reels/TikTok</option><option>YouTube landscape</option><option>Vertical short video</option></select></div>
+    </div>
+    <label for="characterNotes">Character descriptions (optional)</label>
+    <textarea id="characterNotes" rows="2" placeholder="Describe each character's appearance, personality, clothes, and voice."></textarea>
+  </section>
+  <section class="panel">
+    <div class="step-title"><span>03</span><div><h2>Create your production plan</h2><p>Generate a fresh script and scene-by-scene storyboard in this browser.</p></div></div>
+    <button id="generate" class="primary">✦ Generate original script & scenes</button>
+    <div id="output" class="output hidden" aria-live="polite">
+      <div class="output-head"><div><h2 id="storyTitle">Your story</h2><p id="meta"></p></div><button id="copy" class="secondary">Copy plan</button></div>
+      <div id="storyOutput"></div>
+      <div class="actions"><button id="download" class="secondary">Download plan (.txt)</button><button id="save" class="secondary">Save in this browser</button></div>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="step-title"><span>04</span><div><h2>Finish and publish</h2><p>This starter helps plan a video; it cannot render full animation or upload directly to your channels yet.</p></div></div>
+    <ol class="publish-list">
+      <li><strong>Make scenes:</strong> use the storyboard below with a free image/video tool, or create simple motion in a video editor.</li>
+      <li><strong>Add voice and sound:</strong> use your own narration or properly licensed voices and music.</li>
+      <li><strong>Edit:</strong> combine scenes, voice, captions, and sound in a free editor.</li>
+      <li><strong>Publish:</strong> upload the finished video yourself to YouTube, TikTok, and Instagram. Check each platform's current rules and music licenses.</li>
+    </ol>
+    <p class="hint">Automatic generation needs external AI services and usually API keys; automatic posting needs official platform permissions. This static starter does not connect to those services or promise monetization.</p>
+  </section>
+  <footer>WonderStudio · Personal creator toolkit · Your inputs stay in this browser unless you export them.</footer>
+</main>
+<script src="app.js"></script>
+</body></html>
